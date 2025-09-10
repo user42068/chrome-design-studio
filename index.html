@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Životopis Tomáš Turek</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+              
+/* Globální a mobilní styly (mobile-first) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.cv-container {
+    display: flex;
+    flex-direction: column; /* Na mobilu se panely řadí pod sebou */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.left-panel {
+    order: 1; /* Na mobilu se "left-panel" zobrazí jako druhý */
+}
+
+.right-panel {
+    order: 2; /* Na mobilu se "right-panel" zobrazí jako první */
+}
+
+.photo-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.photo-section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.name-contact-box {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.contact-info {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.experience-section h3, .summary-section h3 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* ------------------------------------------------------------- */
+/* Desktop styly (od 768px šířky) */
+@media (min-width: 768px) {
+    .cv-container {
+        flex-direction: row; /* Na desktopu se panely řadí vedle sebe */
+        padding: 40px;
+    }
+
+    .left-panel, .right-panel {
+        order: 0; /* Zrušíme pořadí z mobilního zobrazení */
+    }
+
+    .left-panel {
+        flex: 1;
+        padding-right: 20px;
+        border-right: 1px solid #ddd;
+    }
+
+    .right-panel {
+        flex: 2;
+        padding-left: 40px;
+    }
+
+    .photo-section img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name-contact-box {
+        text-align: left;
+    }
+
+    .contact-info {
+        text-align: left;
+    }
+}
+    
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <div class="left-panel">
+            <div class="summary-section">
+                <h3>O mně</h3>
+                <p>Zodpovědný a spolehlivý profesionál se zkušenostmi v oblasti bezpečnosti, který aktivně rozvíjí dovednosti v oblasti webového vývoje, grafického designu a digitálních nástrojů. Mám praktickou zkušenost s tvorbou front-end komponent (HTML, CSS) na mobilním zařízení pomocí nástrojů jako Trededit. Přesah do tvorby formulářů, výpočtových prvků a základní logiky. Hledám příležitost na juniorské nebo trainee pozici v přátelském a inkluzivním týmu, kde mohu dále růst jako web developer.</p>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="photo-section">
+                <img src="your-photo.jpg" alt="Fotka Tomáše Turka">
+                <div class="name-contact-box">
+                    <h2 class="name">Tomáš Turek</h2>
+                    <p class="location">Praha</p>
+                    <div class="contact-info">
+                        <p>+420 608 744 371</p>
+                        <p>t.turek68@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-section">
+                <h3>Zkušenosti</h3>
+                <div class="job">
+                    <h4>Security Guard | VIG Majordomus, Praha</h4>
+                    <p>2022 - doposud</p>
+                    <ul>
+                        <li>Zajištění ostrahy objektu a majetku</li>
+                        <li>Kontrola přístupu, komunikace s bezpečnostními složkami</li>
+                        <li>Samostatné řešení incidentů</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h4>Security Guard | Dussmann service, Praha </h4>
+                    <p>2020 - 2022</p>
+                    <ul>
+                        <li>Prevence rizik, monitoring</li>
+                        <li>Reakce na alarmy a obsluha kamerového systému</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h4>Security Guard | Rambrok, Praha</h4>
+                    <p>2018 - 2019</p>
+                    <p>Popis není k dispozici.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
