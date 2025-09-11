@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grafické práce — Tomáš Turek</title>
+  <style>
+    /* Základní reset a typografie */
+    :root{
+      --bg:#f5f7f8;
+      --card:#ffffff;
+      --accent:#2aa78f;
+      --text:#222;
+      --muted:#666;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
+    .page{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:8px;
+      background:linear-gradient(135deg,var(--accent),#1f7bb0);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:18px;
+      box-shadow:0 6px 18px rgba(30,30,30,0.08);
+    }
+    h1{margin:0;font-size:1.25rem}
+    .subtitle{color:var(--muted);font-size:0.95rem}
+
+    .actions{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btn{
+      background:var(--card);
+      border:1px solid #e0e6e8;
+      padding:8px 12px;
+      border-radius:8px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:600;
+      font-size:0.95rem;
+      box-shadow:0 2px 6px rgba(10,10,10,0.04);
+    }
+    .btn.primary{
+      background:var(--accent);
+      color:#fff;
+      border: none;
+    }
+
+    /* Grid galerky */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+    @media(min-width:720px){
+      .grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(min-width:1024px){
+      .grid{grid-template-columns:repeat(4,1fr)}
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(10,10,10,0.05);
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      transition:transform .14s ease, box-shadow .14s ease;
+    }
+    .card:hover{transform:translateY(-6px); box-shadow:0 18px 36px rgba(10,10,10,0.08)}
+    .thumb{
+      width:100%;
+      aspect-ratio: 4 / 3;
+      object-fit:cover;
+      display:block;
+    }
+    .meta{
+      padding:10px;
+      font-size:0.92rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:8px;
+    }
+    .meta .title{font-weight:700}
+    .meta .year{color:var(--muted); font-size:0.86rem}
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,0.7);
+      z-index:9999;
+      padding:24px;
+    }
+    .lightbox.open{display:flex}
+    .lb-inner{
+      max-width:1200px;
+      width:100%;
+      max-height:95vh;
+      background:transparent;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .lb-img{
+      max-width:calc(100% - 320px);
+      width:100%;
+      height:auto;
+      max-height:95vh;
+      object-fit:contain;
+      border-radius:8px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.5);
+      background:#fff;
+    }
+    .lb-side{
+      width:300px;
+      min-width:220px;
+      max-height:90vh;
+      overflow:auto;
+      background:var(--card);
+      border-radius:8px;
+      padding:12px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.15);
+    }
+    .lb-side h3{margin:4px 0 8px 0}
+    .lb-side p{margin:0 0 8px 0;color:var(--muted)}
+    .close{
+      display:inline-block;
+      border:none;
+      background:transparent;
+      color:#fff;
+      font-size:20px;
+      position:fixed;
+      right:18px;
+      top:18px;
+    }
+
+    /* Footer */
+    footer{
+      margin-top:22px;
+      padding:12px;
+      border-radius:8px;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+
+    /* Small helpers */
+    .flex{display:flex;gap:8px;align-items:center}
+    a.small{font-size:0.9rem;color:var(--muted);text-decoration:underline}
+    .download-link{
+      display:inline-block;
+      margin-top:8px;
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid #e3e7e8;
+      background:#fafafa;
+      font-weight:600;
+      text-decoration:none;
+      color:var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="page">
+
+    <header>
+      <div class="brand">
+        <div class="logo">TT</div>
+        <div>
+          <h1>Grafické práce — Tomáš Turek</h1>
+          <div class="subtitle">Ukázky bannerů, pracovních inzerátů, vizuálů pro sociální sítě</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <!-- návrat na CV -->
+        <a class="btn" href="/chrome-design-studio/">← Zpět na CV</a>
+        <!-- odkaz na e-shop -->
+        <a class="btn" href="/chrome-design-studio/eshop/" target="_blank">SPA e-shop</a>
+        <!-- stáhnout ZIP s pracemi (pokud bude) -->
+        <a class="btn primary" id="downloadAll" href="/chrome-design-studio/grafika/works.zip">Stáhnout vše</a>
+      </div>
+    </header>
+
+    <!-- Filtr (jen demo, bez JS) -->
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+      <div style="color:var(--muted)">Filtr: <strong>Vše</strong></div>
+      <div style="color:var(--muted);font-size:0.9rem">Tip: klikni na náhled pro zvětšení</div>
+    </div>
+
+    <!-- Galerijní grid -->
+    <main>
+      <section class="grid" id="gallery">
+        <!-- Každý blok: uprav názvy souborů v images/ -->
+        <article class="card" data-full="images/img1.jpg" data-title="Inzerát - Ostraha" data-desc="Vizuál pracovního inzerátu (A4) – adaptace pro Instagram">
+          <img class="thumb" src="images/img1-thumb.jpg" alt="Inzerát - Ostraha">
+          <div class="meta">
+            <div class="title">Inzerát - Ostraha</div>
+            <div class="year">2025</div>
+          </div>
+        </article>
+
+        <article class="card" data-full="images/img2.jpg" data-title="Banner - Akce" data-desc="Sociální vizuál pro promo akci - responzivní varianty">
+          <img class="thumb" src="images/img2-thumb.jpg" alt="Banner - Akce">
+          <div class="meta">
+            <div class="title">Banner - Akce</div>
+            <div class="year">2025</div>
+          </div>
+        </article>
+
+        <article class="card" data-full="images/img3.jpg" data-title="Carousel - Social" data-desc="Série slideů do karuselu na Instagram">
+          <img class="thumb" src="images/img3-thumb.jpg" alt="Carousel - Social">
+          <div class="meta">
+            <div class="title">Carousel - Social</div>
+            <div class="year">2024</div>
+          </div>
+        </article>
+
+        <article class="card" data-full="images/img4.jpg" data-title="Mini promo" data-desc="Rychlý promo vizuál pro stories">
+          <img class="thumb" src="images/img4-thumb.jpg" alt="Mini promo">
+          <div class="meta">
+            <div class="title">Mini promo</div>
+            <div class="year">2024</div>
+          </div>
+        </article>
+
+        <!-- Přidej další položky stejným způsobem -->
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="close" id="lbClose" title="Zavřít">✕</button>
+      <div class="lb-inner" role="dialog" aria-modal="true">
+        <img id="lbImage" class="lb-img" src="" alt="">
+        <aside class="lb-side">
+          <h3 id="lbTitle">Název</h3>
+          <p id="lbDesc">Popis projektu</p>
+          <div style="margin-top:10px">
+            <a id="lbDownload" class="download-link" href="#" download>Stáhnout obrázek</a>
+          </div>
+          <div style="margin-top:12px">
+            <div style="font-size:0.9rem;color:var(--muted)">Sdílej / Odkazy</div>
+            <div class="flex" style="margin-top:8px">
+              <a class="small" href="https://www.instagram.com/" target="_blank">Instagram</a>
+              <a class="small" href="https://www.behance.net/" target="_blank">Behance</a>
+              <a class="small" href="https://github.com/user42068" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      <div>Chceš, abych přidal náhledy i popisky automaticky z JSONu nebo z README? Napiš a doplním.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Jednoduchý lightbox
+    (function(){
+      const cards = document.querySelectorAll('.card');
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImage');
+      const lbTitle = document.getElementById('lbTitle');
+      const lbDesc = document.getElementById('lbDesc');
+      const lbDownload = document.getElementById('lbDownload');
+      const lbClose = document.getElementById('lbClose');
+
+      function openLightbox(card){
+        const full = card.getAttribute('data-full');
+        const title = card.getAttribute('data-title') || '';
+        const desc = card.getAttribute('data-desc') || '';
+        lbImg.src = full;
+        lbImg.alt = title;
+        lbTitle.textContent = title;
+        lbDesc.textContent = desc;
+        lbDownload.href = full;
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox(){
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden','true');
+        lbImg.src = '';
+        document.body.style.overflow = '';
+      }
+
+      cards.forEach(c => {
+        c.addEventListener('click', () => openLightbox(c));
+      });
+
+      lbClose.addEventListener('click', closeLightbox);
+      lb.addEventListener('click', (e) => {
+        if(e.target === lb) closeLightbox();
+      });
+
+      // Zavřít esc
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>
