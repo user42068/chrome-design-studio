@@ -6,109 +6,112 @@
     <title>Životopis Tomáš Turek</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
-              
-/* Globální a mobilní styly (mobile-first) */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 10px;
-    line-height: 1.6;
-}
+        /* Globální a mobilní styly (mobile-first) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 10px;
+            line-height: 1.6;
+        }
 
-.cv-container {
-    display: flex;
-    flex-direction: column; /* Na mobilu se panely řadí pod sebou */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 0 auto;
-}
+        .cv-container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-.left-panel {
-    order: 1; /* Na mobilu se "left-panel" zobrazí jako druhý */
-}
+        .left-panel {
+            order: 1;
+        }
 
-.right-panel {
-    order: 2; /* Na mobilu se "right-panel" zobrazí jako první */
-}
+        .right-panel {
+            order: 2;
+        }
 
-.photo-section {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .photo-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.photo-section img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        .photo-section img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-.name-contact-box {
-    text-align: center;
-    padding: 10px 0;
-}
+        .name-contact-box {
+            text-align: center;
+            padding: 10px 0;
+        }
 
-.contact-info {
-    font-weight: bold;
-    margin-top: 10px;
-}
+        .contact-info {
+            font-weight: bold;
+            margin-top: 10px;
+        }
 
-.experience-section h3, .summary-section h3 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
+        h3 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
 
-ul {
-    padding-left: 20px;
-}
+        ul {
+            padding-left: 20px;
+        }
 
-/* ------------------------------------------------------------- */
-/* Desktop styly (od 768px šířky) */
-@media (min-width: 768px) {
-    .cv-container {
-        flex-direction: row; /* Na desktopu se panely řadí vedle sebe */
-        padding: 40px;
-    }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
 
-    .left-panel, .right-panel {
-        order: 0; /* Zrušíme pořadí z mobilního zobrazení */
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .left-panel {
-        flex: 1;
-        padding-right: 20px;
-        border-right: 1px solid #ddd;
-    }
+        /* Desktop styly (od 768px šířky) */
+        @media (min-width: 768px) {
+            .cv-container {
+                flex-direction: row;
+                padding: 40px;
+            }
 
-    .right-panel {
-        flex: 2;
-        padding-left: 40px;
-    }
+            .left-panel, .right-panel {
+                order: 0;
+            }
 
-    .photo-section img {
-        width: 150px;
-        height: 150px;
-    }
+            .left-panel {
+                flex: 1;
+                padding-right: 20px;
+                border-right: 1px solid #ddd;
+            }
 
-    .name-contact-box {
-        text-align: left;
-    }
+            .right-panel {
+                flex: 2;
+                padding-left: 40px;
+            }
 
-    .contact-info {
-        text-align: left;
-    }
-}
-    
-        
-        
+            .photo-section img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .name-contact-box {
+                text-align: left;
+            }
+
+            .contact-info {
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -118,6 +121,29 @@ ul {
             <div class="summary-section">
                 <h3>O mně</h3>
                 <p>Zodpovědný a spolehlivý profesionál se zkušenostmi v oblasti bezpečnosti, který aktivně rozvíjí dovednosti v oblasti webového vývoje, grafického designu a digitálních nástrojů. Mám praktickou zkušenost s tvorbou front-end komponent (HTML, CSS) na mobilním zařízení pomocí nástrojů jako Trededit. Přesah do tvorby formulářů, výpočtových prvků a základní logiky. Hledám příležitost na juniorské nebo trainee pozici v přátelském a inkluzivním týmu, kde mohu dále růst jako web developer.</p>
+            </div>
+
+            <div class="education-section">
+                <h3>Vzdělávání a zdroje</h3>
+                <h4>Online kurzy</h4>
+                <ul>
+                    <li>Roman Hraško: <a href="https://www.youtube.com/watch?si=N6FsBbt2JbXuOI2A&v=LULd0858mUQ&feature=youtu.be" target="_blank">Naučím tě HTML & CSS za hodinu a půl…</a></li>
+                    <li>Roman Hraška: <a href="https://skillmea.cz/online-kurzy/webrebel-1-html-css-javascript" target="_blank">WEBREBEL – HTML, CSS, JavaScript</a></li>
+                    <li>David Šetek: <a href="https://www.youtube.com/watch?v=-0joAUhvqFQ&list=PLQ8x_VWW6Aku2x097IYBmRaQD0PPe8HBH" target="_blank">JAVASCRIPT: každý na to má JAVASCRIPT</a></li>
+                    <li>tech2etc: <a href="https://www.youtube.com/watch?v=P8YuWEkTeuE&list=PL9bD98LkBR7P8MYh0RzNSHgeVNTA8g0nB" target="_blank">Build Full E-Commerce Website</a></li>
+                    <li>John Smilga: <a href="https://www.udemy.com/course/javascript-tutorial-for-beginners-w/" target="_blank">HTML, CSS, JavaScript (Udemy)</a></li>
+                    <li>Mobile Hacking and Security (Udemy): <a href="https://www.udemy.com/course/draft/6065417/learn/lecture/44698779?start=0#overview" target="_blank">Android + iOS Mobile Security</a></li>
+                    <li>Jakub Haláček: <a href="https://www.youtube.com/watch?si=bP7-MfVMDRl2ZTSV&v=_M2P0pn19f4&feature=youtu.be" target="_blank">Umělá inteligence, agentní systémy a budoucnost vzdělávání</a></li>
+                    <li>Plánovaný kurz: <a href="https://www.udemy.com/course/build-the-best-ecommerce-website-ever-with-react-js-next-js/" target="_blank">Build the Best E-Commerce Website Ever with React JS & Next JS</a></li>
+                </ul>
+
+                <h4>Knihy</h4>
+                <ul>
+                    <li>Duckett, J. (2011). <em>HTML & CSS: Design and Build Websites</em>. Wiley.</li>
+                    <li>Duckett, J. (2014). <em>JavaScript & jQuery: Interactive Front-End Web Development</em>. Wiley.</li>
+                    <li>Castro, E., & Hislop, B. (2006). <em>HTML a CSS</em>. Computer Press.</li>
+                    <li>Adobe Systems. (2012). <em>Photoshop CS6 Classroom in a Book</em>. Adobe Press.</li>
+                </ul>
             </div>
         </div>
 
@@ -161,8 +187,17 @@ ul {
                     <p>Popis není k dispozici.</p>
                 </div>
             </div>
+
+           <div class="portfolio-section">
+               <h3>Projekty / Portfolio</h3>
+                   <ul>
+                       <li><a href="https://user42068.github.io/eshop/" target="_blank">SPA e-shop</a></li>
+                       <li><a href="https://user42068.github.io/grafika/" target="_blank">Grafické práce</a></li>
+                       <li><a href="portfolio.html">Portfolio případových studií</a></li>
+                   </ul>
+          </div>
+
         </div>
-        
     </div>
 
 </body>
