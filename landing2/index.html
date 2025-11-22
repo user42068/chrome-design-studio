@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Music App</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            box-sizing: border-box;
+            /* border: 1px solid #33afe6; */
+            margin: 0;
+            padding: 0px;
+            color: #33afe6;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* do body se nepise width: 1440px; !!!! */
+            /* background-image: url(img/background.jpg);
+            background-size: 1440px;
+            background-position: initial; */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+            /* USPORADANI V PROSTORU */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        div {
+            /* width: 525px; */
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        .section-1 {
+            width: 100%;
+            height: auto;
+            
+            background-color: #f9f9f9;
+            color: black;
+
+            /* USPORADANI V PROSTORU */
+            /* margin */
+            /* padding */
+
+            /* display */
+            align-items: normal;
+            justify-content: normal;
+            position: static;
+
+            /* TYPOGRAFIE */
+            font-family: inherit;
+            font-size: initial;
+            font-weight: normal;
+            line-height: normal;
+        }
+
+        .section-1 h1 {
+            width: 100%;
+            padding: 2.64% 0 0px 0;
+            color: #254446;
+            font-size: 62px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .section-1 p {
+            width: 100%;
+            /* margin:  0 auto; */
+            padding: 0 17.36% 0 17.36%;
+            color: black;
+            text-align: center;
+            /* padding-bottom: 8px; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .section-1 button {
+            margin-top: 40px;
+            padding: 1.53% 3.47%;
+            color: #254446;
+            background-color:  #f9f9f9;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 13px;
+            z-index:  3;
+
+        }
+
+        .section-1 button:hover {
+            color: #f9f9f9;
+            background-color: #254446;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .button-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* position:  absolute; */
+        }
+
+        .section-1-image-1 {
+            width: 44%;
+            margin: 0 auto;
+        }
+
+        
+        .circles {
+            width: 58.81%;
+            position: relative;
+            left: -549px;
+            top: -125px;
+            z-index: 1;
+        }
+        
+
+
+        /* --- SECTION 2 --- */
+        .section-2 {
+            width: 100%;
+            height: auto;
+            background-color: #254446;
+            color: inherit;
+
+            /* USPORADANI V PROSTORU */
+            /* margin */
+           
+
+            /* display */
+            align-items: normal;
+            justify-content: normal;
+            position: static;
+
+            /* TYPOGRAFIE */
+            font-family: inherit;
+            font-size: initial;
+            font-weight: normal;
+            line-height: normal;
+        }
+
+        .section-2-top {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .section-2-top-left {
+            width: 51.73%;
+            /* display: flex;
+            flex-direction: column;
+            gap: 58px; */
+        }
+        .section-2-top-left h2 {
+            padding-bottom: 2.71%;
+            color: #f9d364;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 32px;
+        }
+
+        .section-2-top-left p {
+            color: #f9f9f9;
+            padding-bottom: 2.71%;
+        }
+        .section-2-top-right {
+            width: 48.26%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section-2-top-right img {
+            width: 64%;
+        }
+        .section-2-bottom {
+            width: 100%;
+            height: 410px;
+        }
+        .section-2-bottom h3 {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            color: #f9f9f9;
+            text-align:  center;
+            padding: 1.74% 0 2.78% 0;
+        }
+        .section-2-bottom-box-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-2-bottom-box1 {
+            width: 24.44%;
+            display:  flex;
+            align-items:  center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+
+        .section-2-bottom-box2 {
+            width: 24.44%;
+            display:  flex;
+            align-items:  center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .section-2-bottom-box3 {
+            width: 24.44%;
+            display:  flex;
+            align-items:  center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .circle2 {
+            width: 7.64%;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #f9f9f9;
+            MARGIN: 0 auto;
+        }
+
+        .section-2-bottom-box1 h4 {
+            text-align: center;
+            padding: 3.13% 1.74% 0 1.74%;
+            font-size: 16px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #f9f9f9;
+        }
+
+        .section-2-bottom-box2 h4 {
+            text-align: center;
+            padding: 3.13% 1.74% 1.74% 1.74%;
+            font-size: 16px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #f9f9f9;
+        }
+        
+        .section-2-bottom-box3 h4 {
+            text-align: center;
+            padding: 3.13% 1.74% 0 1.74%;
+            font-size: 16px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #f9f9f9;
+        }
+
+        /* --- SEKCE 3 --- */
+        .section-3 {
+            width: 100%;
+            height: auto;
+            
+            background-color: #f9f9f9;
+            display:  flex;
+            align-items:  center;
+            justify-content:  space-between;
+        }
+
+
+
+        .section-3-left {
+            width: 45.27%;
+            height: 615px;
+            display:  flex;
+            align-items:  center;
+            justify-content:  center;
+        }
+
+        .section-3-left img {
+            width: 77.25%;
+            /* position: relative; */
+            /* top: 85px; */
+            /* left: 4px; */
+        }
+
+        .section-3-right {
+            width: 54.72%;
+            height: 615px;
+            display: flex;
+            flex-direction: column;
+            gap: -18px;
+        }
+
+        .section-3-right h3 {
+           padding: 112px 60px 40px 0;
+           color: #254446;
+           text-align:  right;
+           font-size: 22px;
+           font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .section-3-right p {
+            padding: 0px 60px 60px 0;
+            /* padding-bottom: 268px; */
+            color: #254446;
+            text-align:  right;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .section-3-right button {
+            width: 205px;
+            height: 64px;
+            margin:  0 auto;
+            /* margin-left: 289px; */
+            
+            border-radius: 10px;
+            font-weight: bold;
+            color: #f9f9f9;
+            background-color: #254446;
+        }
+        .section-3-right button:hover {
+            border: 2px solid #254446;
+            background-color: #f9f9f9;
+            color:#254446;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        /* --- SEKCE 4 --- */
+        .section-4 {
+            width: 100%;
+            height: auto;
+            padding-bottom: 4%;
+            background-color: #254446;
+            /* position: absolute; */
+        }
+        /* upraveni nazvu tridy z section-4 h2 na .section-4-h2-container h2 */
+        .section-4-h2-container {
+            width: 100%;
+            height: 216px;
+            position: relative;
+        }
+        
+        .section-4-h2-container h2 {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 84px 0 84px 0;
+            color: #f9f9f9;
+            text-align:  center;
+            font-size: 38px;
+            font-weight:  bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .section-4-h2-container img {
+            width: 8.75%;
+            position: relative;
+            top: -180px;
+            left: 306px;
+            z-index: 1;
+        }
+        .section-4-box-container {
+            /* color: #f9f9f9; */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-4-box {
+            width: 28.64%;
+            height: 240px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-4-box h4 {
+            color: #f9f9f9;
+        }
+
+        .section-4-box h5 {
+            color: #ffd066;
+        }
+
+        .section-4-box p {
+            color: #f9f9f9;
+        }
+
+        /* --- SEKCE 5 --- */
+        .section-5 {
+            width: 100%;
+            height: auto;
+            
+            
+            background-color: #f9f9f9;
+        }
+        .section-5 h1 {
+            width: 100%;
+            font-size: 40px;
+            font-weight: bold;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #254446;
+            text-align: center;
+            padding: 64px 0 64px 0;
+        }
+
+        .section-5-box-container {
+            width: 100%;
+            padding-bottom:  64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-5-box-a {
+            width: 27.83%;
+            height: 525px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .section-5-box-a h2 {
+            padding-top: 40px;
+            color: #ffd066;
+            text-align: center;
+        }
+
+        .section-5-box-a h3, 
+        .section-5-box-a p, 
+        .section-5-box-a h5 {
+            color: #254446;
+            text-align: center;
+        }
+        .section-5-box-a h3 {
+            padding-top: 40px;
+        }
+        .section-5-box-a p {
+            padding-top: 30px;
+        }
+        .section-5-box-a button {
+            width: 60.28%;
+            height: 64px;
+            margin: 40px auto 0 auto;
+            color: #f9f9f9;
+            background-color: #254446;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .section-5-box-a button:hover {
+            
+            color: #254446;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+
+        }
+
+        
+
+        /* BOX B ZACATEK */
+        .section-5-box-b {
+            width: 27.83%;
+            height: 525px;
+
+            background-color: #254446;
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .section-5-box-b h2 {
+            padding-top: 40px;
+
+            color: #f9f9f9;
+            text-align: center;
+        }
+
+        .section-5-box-b h3, 
+        .section-5-box-b p, 
+        .section-5-box-b h5 {
+            color: #f9f9f9;
+            text-align: center;
+        }
+
+        .section-5-box-b h3 {
+            padding-top: 40px;
+        }
+        .section-5-box-b p {
+            padding-top: 30px;
+        }
+        
+
+        .section-5-box-b button {
+            width: 60.28%;
+            height: 64px;
+            margin: 40px auto 0 auto;
+            color: #254446;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .section-5-box-b button:hover {
+            
+            color: #f9f9f9;
+            background-color: #254446;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            
+        }
+
+
+        /* BOX B KONEC */
+
+        /*
+        .section-5-box-b {
+            width: 300px;
+            height: 525px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .section-5-box-b h3, p, h5 {
+            color: #254446;
+            
+        }
+
+        .section-5-box-b button {
+            width: 220px;
+            height: 64px;
+            color: #254446;
+        }*/
+        
+        /* --- SEKCE 6 --- */
+        .section-6 {
+            width: 100%;
+            height: auto;
+            padding-bottom: 7%;
+            
+            
+            background-color: #254446;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-6-left {
+            width: 50%;
+            max-width: 590px;
+            height: 590px;
+            background-color: #254446;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .section-6-left h1 {
+            font-size: 42px;
+            color: #f9f9f9;
+            padding: 62px 60px 14px 25px;
+        }
+        
+        .section-6-left h2 {
+            font-size: 22px;
+            padding: 0px 60px 4px 25px;
+            color: #f9f9f9;
+        }
+        /* TABULKA */
+
+        form {
+            padding: 10px 70px 10px 25px;
+        }
+        /* YOUR NAME */
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f9f9f9;
+        }
+        /* INPUT 1 */
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            max-width: 450px;
+            height: 50px;
+            
+            margin: 0 auto;
+            padding: 15px 0;
+
+            display: block;
+
+            background-color: #254446;
+            border: 1px solid #f9f9f9;
+            color: #f9f9f9;
+            font-size: 18px;
+        }
+        /* EMAIL ADRESS */
+        /* stylovano selektorem label */
+        /* INPUT 2 */
+        /* stylovano zaroven jako prvni INPUT */
+
+        
+        /* BUTTON */
+        input[type="submit"] {
+            width: 100%;
+            max-width: 230px;
+            height: 54px;
+            
+            background-color: #ffd066;
+            color: #254446;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #f9f9f9;
+        }
+        .section-6-right {
+            width: 50%;
+            display: flex;
+            align-items:  center;
+            justify-content:  center;
+        }
+        .section-6-right img {
+            width: 70%;
+            /* position: relative;
+            top: 23px; */
+        }
+
+        /* POZICOVANI TEXTOVYCH POLI */
+
+        .section-2-top-left,
+        .section-3-right,
+        .section-4-box,
+        .section-5-box-a,
+        .section-5-box-b,
+        .section-6-left {
+            padding: 3%;
+        }
+
+
+
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* start media queries */
+
+        @media (max-width: 799px) {
+            .container {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .section-1 {
+                height: auto;
+                width: initial;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .section-1 h1 {
+                font-size: 32px;
+            }
+            
+            .section-1 p {
+                font-size: 14px;
+            }
+
+            .section-1 button {
+                width: 100%;
+                font-size: 18px;
+                padding: 16px 0;
+            }
+            .button-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .image-wrapper {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+            .section-1-image-1 {
+                width: 100%;
+                /* max-width: 350px; */
+                position: static;
+                /* margin: 0 auto; */
+                /* display: block; */
+            }
+
+            .section-1-image-2 {
+                display: none;
+            }
+
+            .section-2 {
+                height: auto;
+                padding: 20px;
+            }
+            .section-2-top {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: auto;
+
+            }
+
+            .section-2-top-left {
+                width: 100%
+            }
+
+            .section-2-top-right {
+                width: 100%
+            }
+            .section-2-top-right img {
+                width: 100%;
+            }
+
+            .section-2-bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: auto;
+
+            }
+
+            .section-2-bottom-box-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: auto;
+
+            }
+
+            .section-2-bottom-box1,
+            .section-2-bottom-box2,
+            .section-2-bottom-box3 {
+                width: 100%;
+            }
+
+            .section-3 {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-3-left {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-3-right {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-3 button {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .section-4 {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-4-h2-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-4-h2-container img {
+                display: none;
+            }
+
+            .section-4-box-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-4-box {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px; 
+            }
+
+            .section-5 {
+                height: auto;
+                
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-5-box-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-5-box-a {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-5-box-b {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-6 {
+                height: auto;
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+            }
+
+            .section-6-left {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-6-right {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+
+
+        @media (max-width: 477px) {
+           
+            .container {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .section-1 {
+                height: auto;
+                width: initial;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .section-1 h1 {
+                font-size: 32px;
+            }
+            
+            .section-1 p {
+                font-size: 14px;
+            }
+
+            .section-1 button {
+                width: 100%;
+                font-size: 18px;
+                padding: 16px 0;
+            }
+            .button-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .image-wrapper {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+            .section-1-image-1 {
+                width: 100%;
+                /* max-width: 350px; */
+                position: static;
+                /* margin: 0 auto; */
+                /* display: block; */
+            }
+
+            .section-1-image-2 {
+                display: none;
+            }
+
+            .section-2 {
+                height: auto;
+                padding: 20px;
+            }
+            .section-2-top {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: auto;
+
+            }
+
+            .section-2-top-left {
+                width: 100%
+            }
+
+            .section-2-top-right {
+                width: 100%
+            }
+            .section-2-top-right img {
+                width: 100%;
+            }
+
+            .section-2-bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: auto;
+
+            }
+
+            .section-2-bottom-box-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: auto;
+
+            }
+
+            .section-2-bottom-box1,
+            .section-2-bottom-box2,
+            .section-2-bottom-box3 {
+                width: 100%;
+            }
+
+            .section-3 {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-3-left {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-3-right {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-3 button {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .section-4 {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .section-4-h2-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-4-h2-container img {
+                display: none;
+            }
+
+            .section-4-box-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-4-box {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px; 
+            }
+
+            .section-5 {
+                height: auto;
+                
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-5-box-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-5-box-a {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-5-box-b {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-6 {
+                height: auto;
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+            }
+
+            .section-6-left {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-6-right {
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        
+        }
+        
+        /* JEDNOTNÉ PSANÍ STYLU */
+        
+        .section-0 {
+            width: initial;
+            height: initial;
+            background-color: initial;
+            color: inherit;
+
+            /* USPORADANI V PROSTORU */
+            /* margin */
+            /* padding */
+
+            /* display */
+            align-items: normal;
+            justify-content: normal;
+
+            position: static;
+
+            /* TYPOGRAFIE */
+
+            font-family: inherit;
+            font-size: initial;
+            font-weight: normal;
+            line-height: normal;
+        
+        }
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* -------------------------------------------------------------------------------------- */
+        /* * {
+            background-color: transparent;
+            border: 1px solid #33afe6;
+        }
+        .section-1,
+        .section-2,
+        .section-3,
+        .section-4,
+        .section-5,
+        .section-6 {
+            background-color: transparent;
+            border: 1px solid #33afe6;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="section-1">
+            <h1>Your Music App</h1>
+            <p>A supporting statement for your value proposition to
+            encourage customers to complet your CTA</p>
+            <div class="button-container">
+                <button>Sign up now</button>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/man-headphones3.png" class="section-1-image-1">
+                
+            </div>                                                
+        </div>
+        <!-- SEKCE 2 -->
+        <div class="section-2">
+            <div class="section-2-top">
+                <div class="section-2-top-left">
+                    <h2>Your Product Presented in Use</h2>
+                    <p>A few words about your product / offer. Focus on the benefits not the features. Explain how your product wil improve your customer´s life.</p>
+                    <p>A few words about your product / offer. Focus on the benefits not the features. Explain how your product wil improve your customer´s life.</p>
+                </div>
+                <div class="section-2-top-right">
+                    <img src="img/section-2-grafika.png" alt="">
+                </div>                
+            </div>
+            <div class="section-2-bottom">
+                <h3>Your Value Proposition</h3>
+                <div class="section-2-bottom-box-container">
+                    <div class="section-2-bottom-box1">
+                        <!-- puvodne pouzity kruhy z elementu div-->
+                        <!-- <div class="circle2"></div> -->
+                         <img src="img/tlacitko1.png" alt="">
+                        <h4>How will your product change your customer´s life</h4>
+                    </div>
+                    <div class="section-2-bottom-box2">
+                        <img src="img/tlacitko3.png" alt="">
+                        <h4>Strong point</h4>
+                    </div>
+                    <div class="section-2-bottom-box3">
+                        <img src="img/tlacitko2.png" alt="">
+                        <h4>How will this help solve the customer´s issues in the future</h4>
+                    </div>
+                </div>      
+            </div>                                                                                   
+        </div>
+        <!-- SEKCE 3 -->
+        <div class="section-3">
+            <div class="section-3-left">
+                <img src="img/section-3-grafika-B.png" alt="">
+            </div>
+            <div class="section-3-right">
+                <h3>A few sentences about your product. How it help to solve clients problems. It shoudl convince the unconvincer. No fake quotes or photos.</h3>
+                <p>A few words about your product/offer. Focus on the benefits not the features. Explain how your product will improve your customer&nbsp´s life.</p>
+                <button>Sign up now</button>
+
+            </div>
+        </div>
+        <!-- SEKCe 4 -->
+        <div class="section-4">
+            <div class="section-4-h2-container">
+                <h2>They Trusted Us</h2>
+                <img src="img/kolecko.png" alt="">
+            </div>
+            
+            <div class="section-4-box-container">
+                <div class="section-4-box">
+                    <p>A few sentences abot your product. How it help to sole clients problems. It shoudl convince the unconvinced. No fake quotes or photos!</p>
+                    <h4>Michael Walker</h4>
+                    <h5>CEO, SomeCompany</h5>
+                </div>
+                <div class="section-4-box">
+                    <p>A few sentences abot your product. How it help to sole clients problems. It shoudl convince the unconvinced. No fake quotes or photos!</p>
+                    <h4>Michael Walker</h4>
+                    <h5>CEO, SomeCompany</h5>
+                </div>
+                <div class="section-4-box">
+                    <p>A few sentences abot your product. How it help to sole clients problems. It shoudl convince the unconvinced. No fake quotes or photos!</p>
+                    <h4>Michael Walker</h4>
+                    <h5>CEO, SomeCompany</h5>
+                </div>
+            </div>
+            
+        </div>
+        <div class="section-5">
+            <h1>Pricing</h1>
+            <div class="section-5-box-container">
+                <div class="section-5-box-a">
+                    <h2>BASIC</h2>
+                    <h3>9 USD
+                    per month</h3>
+                    <p>Add a description of your offer and key benefits.</p>
+                    <h5>Benefit No. 1</h5>
+                    <h5>Benefit No. 2</h5>
+                    <h5>Benefit No. 3</h5>
+                    <button>Sign up now</button>
+                </div>
+                <div class="section-5-box-b">
+                    <h2>PRO</h2>
+                    <h3>9 USD
+                    per month</h3>
+                    <p>Add a description of your offer and key benefits.</p>
+                    <h5>Benefit No. 1</h5>
+                    <h5>Benefit No. 2</h5>
+                    <h5>Benefit No. 3</h5>
+                    <button>Sign up now</button>
+                </div>
+                <div class="section-5-box-a">
+                    <h2>ADVANCED</h2>
+                    <h3>9 USD
+                    per month</h3>
+                    <p>Add a description of your offer and key benefits.</p>
+                    <h5>Benefit No. 1</h5>
+                    <h5>Benefit No. 2</h5>
+                    <h5>Benefit No. 3</h5>
+                    <button>Sign up now</button>
+                </div>
+            </div>
+        </div>
+        <div class="section-6">
+            <div class="section-6-left">
+                <h1>Create a free account</h1>
+                <h2>Test our product for 14 days for free.</h2>
+                <form action="">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email address</label>
+                    <input type="email">
+                    <label class="checkbox">
+                        <input type="checkbox" name="agree">
+                        <span class="custom-check"></span>
+                        I agree to recieve commercial information from (...)
+                    </label>
+                    <input type="submit" name="subscribe" value="Sign up now">
+
+                </form>        
+
+            </div>
+            <div class="section-6-right">
+                <img src="img/section-6-grafika-A.png" alt="">
+            </div>
+           
+        </div>
+        
+    </div>
+
+
+
+    <script>
+        setInterval(() => console.log(Date.now(),window.innerWidth), 1000);
+
+        console.log(Object.getOwnPropertyDescriptior(window.__proto__, 'innerWidth'));
+    </script>
+</body>
+</html>
