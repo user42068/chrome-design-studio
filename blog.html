@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlastní blog</title>
+    <style>
+
+       
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+            
+
+            color: #0ab0ee;
+        }
+
+        .debug {
+            border: 1px solid #0ab0ee;
+        }
+
+        /*body section col atd */
+
+        body {
+            background-image: url('img/background4.jpg');
+            background-size: 100%;
+
+            color: #0ab0ee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        
+        .col-33 {
+            width: 33%;
+        }
+        .col-66 {
+            width: 66%;
+        }
+
+        .footer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* globalni styly */
+        div,
+        section {
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        button,
+        ul {
+            padding: 20px;
+        }
+
+        h4,
+        h5,
+        h6, 
+        li {
+            padding: 10px;
+        }
+        h1 {
+            color: #fff;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+            font-style: italic;
+            border-bottom: 2px solid #0ab0ee;
+        }
+
+        .primaryBtn {
+            background-color: #000100;
+            border: 2px solid #0ab0ee;
+            border-radius: 15px;
+        }
+
+        .primaryBtn:hover {
+            color: #fff;
+            font-weight: bold;
+            border: 3px solid #fff;
+        }
+
+        .img-1 {
+            border-radius: 50%;
+            border: 2px solid #0ab0ee;
+            display: block;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #02def6;
+        }
+        a:hover {
+            color: #fff;
+            font-weight: bold;
+        }
+        /* utilities */
+
+        .border-left {
+            border-left: 2px solid #0ab0ee;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        @media (max-width: 1300px) {
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .border-left {
+                border-left: none;
+            }
+        }
+
+        @media (max-width: 1150px) {
+            section {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .col-33,
+            .col-66 {
+                width: 100%;
+            }
+
+            .palette {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 799px) {
+            section {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .col-33,
+            .col-66 {
+                width: 100%;
+            }
+
+            .img-1 {
+                width: 75%;
+            }
+        }
+
+        /* demo-section */
+         .demo-section {
+
+            color: #000;
+            display: block;
+            align-items: stretch;
+            justify-content: flex-start;
+
+
+        }
+        .palette {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .palette li {
+            list-style: none;
+        }
+
+        .color1, 
+        .color2, 
+        .color3, 
+        .color4, 
+        .color5, 
+        .color6 {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        } 
+
+        .color1 {
+            background-color: #000100;
+        }
+        .color2 {
+            background-color: #2a2f3b;
+        }
+        .color3 {
+            background-color: #0ab0ee;
+        }
+        .color4 {
+            background-color: #02def6;
+        }
+        .color5 {
+            background-color: #ffffff;
+        }
+        .color6 {
+            background-color: #b0b0b0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+        
+            <div class="col-33">
+                <h2>O MNĚ</h2>
+                <p>Zodpovědný a spolehlivý profesionál se zkušenostmi v oblasti bezpečnosti, který aktivně rozvíjí dovednosti v oblasti webového vývoje, grafického designu a digitálních nástrojů. Mám praktickou zkušenost s tvorbou front-end komponent (HTML, CSS) na mobilním zařízení pomocí nástrojů jako Trededit. Přesah do tvorby formulářů, výpočtových prvků a základní logiky. Hledám příležitost na juniorské nebo trainee pozici v přátelském a inkluzivním týmu, kde mohu dále růst jako web developer.</p>
+                <h2>PORTFOLIO</h2>
+                <ul>
+                    <!-- <li><a href="#">Grafický design</a></li> -->
+                    <li><a href="https://user42068.github.io/chrome-design-studio/landing2/index.html">Landing page 2</a></li>
+                    <li><a href="https://user42068.github.io/chrome-design-studio/landing3/index.html">Landing page 3</a></li>
+                    <!-- <li><a href="#">Položka 4</a></li> -->
+                </ul>
+                <h3>Vzdělávání a zdroje</h3>
+                <h4>Online kurzy</h4>
+                <ul>
+                    <li>Roman Hraško: <a href="https://www.youtube.com/watch?si=N6FsBbt2JbXuOI2A&v=LULd0858mUQ&feature=youtu.be" target="_blank">Naučím tě HTML & CSS za hodinu a půl…</a></li>
+                    <li>Roman Hraška: <a href="https://skillmea.cz/online-kurzy/webrebel-1-html-css-javascript" target="_blank">WEBREBEL – HTML, CSS, JavaScript</a></li>
+                    <li>David Šetek: <a href="https://www.youtube.com/watch?v=-0joAUhvqFQ&list=PLQ8x_VWW6Aku2x097IYBmRaQD0PPe8HBH" target="_blank">JAVASCRIPT: každý na to má JAVASCRIPT</a></li>
+                    <li>tech2etc: <a href="https://www.youtube.com/watch?v=P8YuWEkTeuE&list=PL9bD98LkBR7P8MYh0RzNSHgeVNTA8g0nB" target="_blank">Build Full E-Commerce Website</a></li>
+                    <li>John Smilga: <a href="https://www.udemy.com/course/javascript-tutorial-for-beginners-w/" target="_blank">HTML, CSS, JavaScript (Udemy)</a></li>
+                    <li>Mobile Hacking and Security (Udemy): <a href="https://www.udemy.com/course/draft/6065417/learn/lecture/44698779?start=0#overview" target="_blank">Android + iOS Mobile Security</a></li>
+                    <li>Jakub Haláček: <a href="https://www.youtube.com/watch?si=bP7-MfVMDRl2ZTSV&v=_M2P0pn19f4&feature=youtu.be" target="_blank">Umělá inteligence, agentní systémy a budoucnost vzdělávání</a></li>
+                    <li>Plánovaný kurz: <a href="https://www.udemy.com/course/build-the-best-ecommerce-website-ever-with-react-js-next-js/" target="_blank">Build the Best E-Commerce Website Ever with React JS & Next JS</a></li>
+                </ul>
+
+                <h4>Knihy</h4>
+                <ul>
+                    <li>Duckett, J. (2011). <em>HTML & CSS: Design and Build Websites</em>. Wiley.</li>
+                    <li>Duckett, J. (2014). <em>JavaScript & jQuery: Interactive Front-End Web Development</em>. Wiley.</li>
+                    <li>Castro, E., & Hislop, B. (2006). <em>HTML a CSS</em>. Computer Press.</li>
+                    <li>Adobe Systems. (2012). <em>Photoshop CS6 Classroom in a Book</em>. Adobe Press.</li>
+                </ul>
+            </div>
+            <div class="col-66 border-left">
+                <img src="img/student.png" class="img-1" alt="">
+                <h1>Tomáš Turek</h1>
+                <h3>Praha</h3>
+                <h3>+420 608 744 371</h3>
+                <h3>turektomas68@gmail.com</h3>
+
+
+                
+
+                
+
+                <h2>Zkušenosti</h2>
+                <h3>Security Guard | VIG Majordomus, Praha</h3>
+                <h4>2022 - doposud</h4>
+                <ul>
+                    <li>Zajištění ostrahy objektu a majetku</li>
+                    <li> Kontrola přístupu, komunikace s bezpečnostními složkami</li>
+                    <li>Samostatné řešení incidentů</li>
+                </ul>
+                
+                <h3>Security Guard | Dussmann service, Praha</h3>
+                <h4>2020 - 2022</h4>
+                <ul>
+                    <li>Prevence rizik, monitoring</li>
+                    <li>Reakce na alarmy a obsluha kamerového systému</li>
+                </ul>
+
+                <h3>Security Guard | Rambrok, Praha</h3>
+                <h4>2018 - 2019</h4>
+
+            </div>
+
+        </section>
+        <section class="footer">
+                <p>© <span id="year">2025</span> Chrome Design Studio</p>
+        </section>
+        <!-- <section class="demo-section">
+            <h1>Heading 1 - Velký nadpis 60px</h1>
+            <h2>Heading 2 - Sekční nadpis 48px</h2>
+            <h3>Heading 3 - Podnadpis sekce 36 px</h3>
+            <h4>Heading 4 - Zvýrazněné prvky 30px</h4>
+            <h5>Heading 5 - Titulky boxů 24px</h5>
+            <h6>Heading 6 22px</h6>
+            <p>Paragraph - Odstavcový text</p>
+            <button class="primaryBtn">Button</button>
+            <button class="secondaryBtn">Button</button>
+            <div class="palette">
+                <li><div class="color1"></div></li>
+                <li>##000100</li>
+                <li><div class="color2"></div></li>
+                <li>#2a2f3b</li>
+                <li><div class="color3"></div></li>
+                <li>#0ab0ee</li>
+                <li><div class="color4"></div></li>
+                <li>#02def6</li>
+                <li><div class="color5"></div></li>
+                <li>#ffffff</li>
+                <li><div class="color6"></div></li>
+                <li>#b0b0b0</li>
+            </div>
+        </section> -->
+    </div>
+    <script>
+        setInterval(() => console.log(Date.now(),window.innerWidth), 1000);
+
+        console.log(Object.getOwnPropertyDescriptior(window.__proto__, 'innerWidth'));
+
+
+    </script>
+    
+</body>
+</html>
+
