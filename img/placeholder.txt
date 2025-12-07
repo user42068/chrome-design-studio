@@ -1,0 +1,5 @@
+# Placeholder
+
+This file is a temporary placeholder to initialize the directory structure for mobile development work.
+
+Further files and project components will be added shortly.
