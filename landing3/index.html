@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+            /* border: 1px solid #33afe6; */
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #fefefe;
+        }
+
+        /* body, section, div */
+        body {
+            background-color: #323232
+        }
+
+        .container {
+            /* width: 1440px; */
+            margin: 0 auto;
+        }
+
+        .col-2 {
+            width: 49%;
+        }
+        .col-4 {
+            width: 24%;
+            
+        }
+
+        .col-4 img {
+            
+            /* display: flex; 
+            align-items: center;
+            justify-content: center; */
+
+            display: block;
+            margin: 0 auto;
+        }
+
+        section {
+
+            padding: 80px;
+
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        
+        .sec-1 {
+            width: 100%;
+            height: 80px;
+            padding: 0 80px;
+            background-color: #fefefe;
+        }
+        .text-1 {
+            background: rgba(255,255,255,0.3);
+            height: 60vh;
+            padding: 80px;
+        }
+
+        .sec-2 {
+            width: 100%;
+            height: 104vh;
+
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('img/sec-2-img-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .sec-3 {
+            width: 100%;
+            height: 40vh;
+            background-color: #323232;
+        }
+
+        .sec-4 {
+            width: 100%;
+            height: 110vh;
+            background-color: #323232;
+        }
+
+
+
+        /* globální styly */
+        h1 {
+            font-size: 40px;
+            margin-bottom: 28px;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        h5 {
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        button {
+            font-size: 16px;
+            background-color: #f0c503;
+            padding: 14px 28px;
+        } 
+
+        form {
+            background-color: #4c4c4c;
+            height: 75vh;
+            padding: 80px;
+        }
+
+        form label,
+        form input,
+        form textarea,
+        form select {
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+
+        /* barevna paletka */
+        .sec-5 {
+
+            color: #000;
+            display: block;
+            align-items: stretch;
+            justify-content: flex-start;
+
+
+        }
+        .palette {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .palette li {
+            list-style: none;
+        }
+
+        .color1, 
+        .color2, 
+        .color3, 
+        .color4, 
+        .color5, 
+        .color6 {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        } 
+
+        .color1 {
+            background-color: #fefefe;
+        }
+        .color2 {
+            background-color: #323232;
+        }
+        .color3 {
+            background-color: #f0c503;
+        }
+        .color4 {
+            background-color: #4c4C4c;
+        }
+        .color5 {
+            background-color: #e3e3e3;
+        }
+        .color6 {
+            background-color: #b0b0b0;
+        }
+
+        /* start media queries */
+
+        @media (max-width: 799px) {
+            section {
+                width: 100%;
+                height: auto;
+
+                padding: 20px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .sec-1,
+            .sec-2,
+            .sec-3,
+            .sec-4 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                height: auto;
+            }
+
+            .text-1 {
+                padding: 20px;
+            }
+
+            .col-2 {
+                width: 100%;
+                
+            }
+
+            .col-4 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .col-4 img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            form {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .palette {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <section class="sec-1">
+            
+        </section>
+        <section class="sec-2">
+            <div class="col-2">
+                <div class="text-1">
+                    <h3>Add more speed to your website</h3>
+                    <h1>Welcome!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button>READ MORE</button>
+                </div>
+
+            </div>
+            <div class="col-2"></div>
+        </section>
+        <section class="sec-3">
+            <div class="col-4">
+                <img src="img/yellowButton1.png" alt="">
+                <h5>Our Main Office</h5>
+                <p>SoHo 94 Broadway St New York, NY 1001</p>
+            </div>
+            <div class="col-4">
+                <img src="img/yellowButton2.png" alt="">
+                <h5>Our Main Office</h5>
+                <p>SoHo 94 Broadway St New York, NY 1001</p>
+            </div>
+            <div class="col-4">
+                <img src="img/yellowButton3.png" alt="">
+                <h5>Our Main Office</h5>
+                <p>SoHo 94 Broadway St New York, NY 1001</p>
+            </div>
+            <div class="col-4">
+                <img src="img/yellowButton4.png" alt="">
+                <h5>Our Main Office</h5>
+                <p>SoHo 94 Broadway St New York, NY 1001</p>
+            </div>
+        </section>
+        <section class="sec-4">
+            <div class="col-2">
+                <h2>We're here to support</h2>
+                <p></p>
+                <div>
+                    <p></p>
+                </div>
+
+
+            </div>
+            <div class="col-2">
+                <form action="">
+                    <label for="Name">Name</label>
+                    <input type="text">
+                    <label for="Email">Email</label>
+                    <input type="text">
+                    <label for="Message">Message</label>
+                    <input type="text">
+                    <button>Submit</button>
+                </form>
+            </div>
+        </section>
+        <section class="sec-5">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Paragraph</p>
+            <button>Button</button>
+
+            <ul class="palette">
+                <li><div class="color1"></div></li>
+                <li>#fefefe</li>
+                <li><div class="color2"></div></li>
+                <li>#323232</li>
+                <li><div class="color3"></div></li>
+                <li>#f0c503</li>
+                <li><div class="color4"></div></li>
+                <li>#4c4C4c</li>
+                <li><div class="color5"></div></li>
+                <li>#e3e3e3</li>
+                <li><div class="color6"></div></li>
+                <li>#b0b0b0</li>
+            </ul>
+
+            
+            
+            
+            
+            
+            
+        </section>
+    </div>
+    
+</body>
+</html>
+
+
+
+
